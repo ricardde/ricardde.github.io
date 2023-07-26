@@ -13,15 +13,15 @@
 <body>
     <h1>github pages test</h1>
         <py-script>
-            import pandas as pd
-            import numpy as np
-            import matplotlib.pyplot as plt
-            import seaborn as sns
+            await micropip.install("pandas")
+            await micropip.install("numpy")
+            await micropip.install("matplotlib")
+            await micropip.install("seaborn")
 
-            df = pd.DataFrame(np.random.randn(20, 3), columns=['a', 'b', 'c'])
+            df = pandas.DataFrame(numpy.random.randn(20, 3), columns=['a', 'b', 'c'])
 
-            fig = plt.subplots(figsize=(20,5))
-            sns.lineplot(df)
+            fig = matplotlib.pyplot.subplots(figsize=(20,5))
+            seaborn.lineplot(df)
             display(fig, target="graph-area", append=False)
 
         </py-script>
